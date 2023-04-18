@@ -25,3 +25,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+In this application, I have added login and signup forms with validation. In the routing, I used Auth guard. Here you can get a sample of the interceptor and age pipe.
