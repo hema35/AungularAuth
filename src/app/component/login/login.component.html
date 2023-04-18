@@ -1,0 +1,31 @@
+
+<div>
+  <div class="panel-heading">
+  <h3>Login</h3>
+</div>
+<div class="panel-body">
+  <form [formGroup]="loginForm">
+    <div class="input-field">
+    <input type="text" placeholder="username" formControlName="username">
+  </div>
+  <small  class="text-danger" *ngIf="loginForm.controls['username'].dirty && loginForm.hasError('required','username')">*Username is required</small>
+  <div class="input-field">
+    <input type="text" placeholder="password" formControlName="password">
+  </div>
+  <small class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</small>
+    <div>
+      <a id="forget" class="font-weight-bold">Forget password?</a>
+    </div>
+    <button class="btn btn-primary" (click)="onLogin()" type="submit">
+     Login
+    </button>
+    <div>
+      Don't have an account
+      <a id="forget" routerLink="/signup">Signup</a>
+    </div>
+
+  </form>
+</div>
+<div>Age</div>
+<div *ngFor="let actor of Actors">{{actor.Birthdate | age}}</div>
+</div>

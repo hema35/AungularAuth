@@ -1,0 +1,31 @@
+
+<div>
+  <h3>Login</h3>
+  <form [formGroup]="signupForm">
+    <div>
+    <input type="text" placeholder="firstname" formControlName="firstname">
+    <small  class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')">*Firstname is required</small>
+  </div>
+    <input type="text" placeholder="lastname" formControlName="lastname">
+    <small  class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')">*Lastname is required</small>
+
+    <input type="text" placeholder="Email" formControlName="Email">
+    <small  class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')">*Email is required</small>
+
+    <input type="text" placeholder="username" formControlName="username">
+    <small  class="text-danger" *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')">*Username is required</small>
+
+    <input type="text" placeholder="password" formControlName="password">
+    <small class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*Password is required</small>
+    <div>
+      <a id="forget">Forget password?</a>
+    </div>
+    <button type="submit" (click)="onSubmit()">
+     Login
+    </button>
+
+    <div>Already having account?
+      <a id="forget" routerLink="/login">Login</a>
+    </div>
+  </form>
+</div>
